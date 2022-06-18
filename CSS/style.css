@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "poppins";
+  src: url(../font/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.btn button {
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0,.5);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    z-index: 1;
+}
+
+.btn button:hover {
+    border: none;
+    animation: anim 8s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0%
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.btn button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.btn button:hover::before {
+    filter: blur(20px);
+}
+
+.btn button:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0,.5);
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border: none;
+}
+
+/* ------------------------------------- */
+
+.box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.box:target {
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0,.5);
+}
+
+.box a {
+    position: absolute;
+    top: 250px;
+    right: 100px;
+    text-decoration: none;
+    color: #fff;
+    height: 25px;
+    width: 20px;
+    background: red;
+    display: block;
+    text-align: center;
+}
+
+.box marquee {
+    position: absolute;
+    top: 300px;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
